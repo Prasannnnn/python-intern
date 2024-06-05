@@ -75,9 +75,9 @@ even range (6,20) ---> not weird
 even greater (20)---> not weird
 '''
 
-def add(a,b):
-    return a+b
-print(add(10,5))
+# def add(a,b):
+#     return a+b
+# print(add(10,5))
 
 '''
 user two inputs a and b
@@ -89,7 +89,42 @@ operators = add
 Use Functions
 '''
 
+
+def arithmetic_operations(a,b,operator):
+    if operator=="+":
+        return a+b
+    elif operator=="-":
+        return a-b
+    elif operator=="*":
+        return a*b
+    elif operator=="/":
+        return a/b
+    elif operator=="%":
+        return a%b
+    elif operator=="//":
+        return a//b
+    elif operator=="**":
+        return a**b   
+a=int(input("Enter a number:"))
+b=int(input("enter number2:"))
+operator=input("Enter any arithmetic operators:")
+c=arithmetic_operations(a,b,operator)
+print(c)
 '''
 Functions
 '''
+
+
+'''
+Recursions
+'''
+def power(a,b):
+    if b!=0:
+        return a*power(a,b-1)
+    else:
+        return 1
+a=float(input())
+b=float(input())
+print(a,"to the power",b,"is", power(a,b))
+
 
