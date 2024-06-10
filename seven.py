@@ -73,45 +73,81 @@ but7.grid(column=1,row=2,ipadx=50,ipady=50)
 but8 = ttk.Button(a,text=' ',command=lambda:butpress(9))
 but8.grid(column=2,row=2,ipadx=50,ipady=50)
 
-
-player = 1 
-def butpress(butnumber):
+player = 1
+def butpress(ButtonNumber):
     global player
 
+    if ButtonNumber == 1 and player==1:
+        but.config(text='X')
+        player=2
 
-    if butnumber == 1 and player ==1:
-        but.config(text="x")
+    elif ButtonNumber ==1 and player==2:
+        but.config(text='O')
+        player = 1
+
+    elif ButtonNumber == 2 and player==1:
+        but1.config(text='X')
         player = 2
 
-    elif butnumber == 2 and player == 1:
-        but.config(text="x")
-        player=2
-
-    elif butnumber == 3 and player == 1:
-        but.config(text="x")
-        player=2
-
-    elif butnumber == 4 and player == 1:
-        but.config(text="x")
-        player=2
+    elif ButtonNumber ==2 and player==2:
+        but1.config(text='O')
+        player = 1
     
-    elif butnumber == 5 and player == 1:
-        but.config(text="x")
-        player=2
+    elif ButtonNumber == 3 and player==1:
+        but2.config(text='X')
+        player = 2
 
-    elif butnumber == 6 and player == 1:
-        but.config(text="x")
-        player=2
+    elif ButtonNumber ==3 and player==2:
+        but2.config(text='O')
+        player = 1
 
-    elif butnumber == 7 and player == 1:
-        but.config(text="x")
-        player=2
+    elif ButtonNumber == 4 and player==1:
+        but3.config(text='X')
+        player = 2
 
-    elif butnumber == 8 and player == 1:
-        but.config(text="x")
-        player=2
+    elif ButtonNumber ==4 and player==2:
+        but3.config(text='O')
+        player = 1
 
-    elif butnumber == 9 and player == 1:
-        but.config(text="x")
-        player=2
+    elif ButtonNumber == 5 and player==1:
+        but4.config(text='X')
+        player = 2
+
+    elif ButtonNumber ==5 and player==2:
+        but4.config(text='O')
+        player = 1
+    
+    elif ButtonNumber == 6 and player==1:
+        but5.config(text='X')
+        player = 2
+
+    elif ButtonNumber ==6 and player==2:
+        but5.config(text='O')
+        player = 1
+    
+    elif ButtonNumber == 7 and player==1:
+        but6.config(text='X')
+        player = 2
+    
+    elif ButtonNumber == 7 and player==2:
+        but6.config(text='O')
+        player = 1
+
+    elif ButtonNumber == 8 and player==1:
+        but7.config(text='X')
+        player = 2
+
+    elif ButtonNumber ==8 and player==2:
+        but7.config(text='O')
+        player = 1
+
+    elif ButtonNumber == 9 and player==1:
+        but8.config(text='X')
+        player = 2
+
+    elif ButtonNumber ==9 and player==2:
+        but8.config(text='O')
+        player = 1
+
+
 a.mainloop()
