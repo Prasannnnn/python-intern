@@ -40,6 +40,7 @@ player 2
 
 from tkinter import *
 from tkinter import ttk
+from tkinter import messagebox
 
 a = Tk()
 
@@ -72,6 +73,27 @@ but7.grid(column=1,row=2,ipadx=50,ipady=50)
 
 but8 = ttk.Button(a,text=' ',command=lambda:butpress(9))
 but8.grid(column=2,row=2,ipadx=50,ipady=50)
+
+
+def checkwin():
+    if(but['text']=='O' and but1['text']=='O' and but2['text']=='O' or
+       but3['text']=='O' and but4['text']=='O' and but5['text']=='O' or
+       but6['text']=='O' and but7['text']=='O' and but8['text']=='O' or
+       but['text']=='O' and but3['text']=='O' and but6['text']=='O' or
+       but1['text']=='O' and but4['text']=='O' and but7['text']=='O' or
+       but2['text']=='O' and but5['text']=='O' and but8['text']=='O' or
+       but['text']=='O' and but4['text']=='O' and but8['text']=='O' or
+       but2['text']=='O' and but4['text']=='O' and but6['text']=='O' ):
+        messagebox.showinfo("Winner of XOX game","Player O wins")
+    elif(but['text']=='X' and but1['text']=='X' and but2['text']=='X' or
+       but3['text']=='X' and but4['text']=='X' and but5['text']=='X' or
+       but6['text']=='X' and but7['text']=='X' and but8['text']=='X' or
+       but['text']=='X' and but3['text']=='X' and but6['text']=='X' or
+       but1['text']=='X' and but4['text']=='X' and but7['text']=='X' or
+       but2['text']=='X' and but5['text']=='X' and but8['text']=='X' or
+       but['text']=='X' and but4['text']=='X' and but8['text']=='X' or
+       but2['text']=='X' and but4['text']=='X' and but6['text']=='X'):
+        messagebox.showinfo("Winner of XOX game","Player X wins")
 
 player = 1
 def butpress(ButtonNumber):
@@ -149,5 +171,5 @@ def butpress(ButtonNumber):
         but8.config(text='O')
         player = 1
 
-
+    checkwin()
 a.mainloop()
