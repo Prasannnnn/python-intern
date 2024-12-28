@@ -63,3 +63,17 @@ def mun(**kargs):
         print("%s == %s " % (keys,values))
 
 mun(first = 'Running',second = 'up',third = 'that',fourth ='hill', fifth ='kate',six = 'selena')
+
+
+
+def f1():
+    s = "this is function 1"
+
+    def f2():
+        print(s)
+    
+    f2()
+
+f1()
+
+
