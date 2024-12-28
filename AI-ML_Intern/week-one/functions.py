@@ -56,3 +56,10 @@ def names(*args):
 
 a = names(1,2,3,4,5,6)
 print(a)
+
+
+def mun(**kargs):
+    for keys,values in kargs.items():
+        print("%s == %s " % (keys,values))
+
+mun(first = 'Running',second = 'up',third = 'that',fourth ='hill', fifth ='kate',six = 'selena')
